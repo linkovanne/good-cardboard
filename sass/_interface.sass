@@ -1,0 +1,113 @@
+.section-title
+	text-align: center
+	margin-bottom: 27px
+	font:
+	 size: 27px
+	 weight: 700
+	text-transform: uppercase
+	&::after
+		content: ''
+		display: block
+		margin-top: 12px
+		height: 6px
+		background: url(../img/wavy-line.png) center no-repeat
+
+.button
+	font-family: 'Roboto', sans-serif
+	vertical-align: middle
+	color: $text-color-light
+	font-size: 14px
+	background-color: $active-color
+ border: 1px solid transparent
+ padding: 13px 22px
+ border-radius: 5px
+ text-align: center
+ &:hover
+ 	background-color: lighten($active-color, 10)
+ 	cursor: pointer
+ 	/* не работает */
+ &-o
+ 	border: 1px solid rgba($text-color-dark, 0.5)
+ 	background-color: transparent
+ 	margin-right: 8px;
+ 	color: $text-color-dark
+ 	&:hover
+ 		background-color: lighten($active-color, 10)
+ 		color: $text-color-light
+ 		border: 1px solid transparent
+ 		cursor: pointer
+
+	img
+		vertical-align: middle
+	&-big
+		padding-top: 19px
+		padding-bottom: 19px
+		vertical-align: middle
+		&:hover
+			cursor: pointer
+			/* не работает */
+
+.slider-arrow
+	position: absolute
+	top: 0
+	height: 100%
+	width: 22px
+	z-index: 99
+	&:hover
+		cursor: pointer
+	&__mobile
+		position: absolute
+		vertical-align: middle
+		margin:
+		 top: 149px
+		 bottom: 149px
+		top: 0
+		width: 22px
+		height: 79px
+		z-index: 99
+		&:hover
+			cursor: pointer
+	&__prod
+  border: 1px solid $active-color
+	&__left
+		left: 0
+  background: $text-color-light url(../img/Arrow-left.png) center no-repeat
+  &:hover
+  	background: $active-color url(../img/Arrow-active-left.png) center no-repeat
+	&__right
+		right: 0
+		background: $text-color-light url(../img/Arrow-right.png) center no-repeat
+		&:hover
+			background: $active-color url(../img/Arrow-active-right.png) center no-repeat
+	&__lfeadback
+		top: 50%
+		left: -22px
+		transform: translateY(-50%)
+  background: transparent url(../img/lfeadback.png) center no-repeat
+  background-size: 100% 100%
+  width: 10px
+  height: 47px
+
+	&__rfeadback
+		top: 50%
+		right: -22px
+  transform: translateY(-50%)
+		background: transparent url(../img/rfeadback.png) center no-repeat
+		background-size: 100% 100%
+		width: 10px
+		height: 47px
+
+.dark-bg
+	position: relative
+	z-index: 2
+	/* затемнение фоновой картинки */
+	&::before
+		content: ''
+		display: block
+		width: 100%
+		height: 100%
+		background-color: rgba(0, 0, 0, 0.8)
+		z-index: -1
+		position: absolute
+		left: 0
+		top: 0
